@@ -1,0 +1,53 @@
+﻿------ Rebuild All started: Project: g7_20, Configuration: Debug AVR ------
+Build started.
+Project "g7_20.cproj" (Clean target(s)):
+Target "Clean" in file "C:\Program Files (x86)\Atmel\Atmel Studio 6.2\Vs\Compiler.targets" from project "D:\Projects\MCU\AVR\g7_20\g7_20.cproj" (entry point):
+	Using "RunCompilerTask" task from assembly "C:\Program Files (x86)\Atmel\Atmel Studio 6.2\Extensions\Application\AvrGCC.dll".
+	Task "RunCompilerTask"
+		Shell Utils Path C:\Program Files (x86)\Atmel\Atmel Studio 6.2\shellUtils
+		C:\Program Files (x86)\Atmel\Atmel Studio 6.2\shellUtils\make.exe clean 
+		rm -rf  g7_20.o   
+		rm -rf  g7_20.d   
+		rm -rf "g7_20.elf" "g7_20.a" "g7_20.hex" "g7_20.lss" "g7_20.eep" "g7_20.map" "g7_20.srec" "g7_20.usersignatures"
+	Done executing task "RunCompilerTask".
+Done building target "Clean" in project "g7_20.cproj".
+Done building project "g7_20.cproj".
+
+Build succeeded.
+------ Rebuild All started: Project: g7_20, Configuration: Debug AVR ------
+Build started.
+Project "g7_20.cproj" (default targets):
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Atmel Studio 6.2\Vs\Compiler.targets" from project "D:\Projects\MCU\AVR\g7_20\g7_20.cproj" (target "Build" depends on it):
+	Task "RunCompilerTask"
+		Shell Utils Path C:\Program Files (x86)\Atmel\Atmel Studio 6.2\shellUtils
+		C:\Program Files (x86)\Atmel\Atmel Studio 6.2\shellUtils\make.exe all 
+		Building file: .././g7_20.c
+		Invoking: AVR/GNU C Compiler : 4.8.1
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=attiny13a -c -std=gnu99 -MD -MP -MF "g7_20.d" -MT"g7_20.d" -MT"g7_20.o"   -o "g7_20.o" ".././g7_20.c" 
+		Finished building: .././g7_20.c
+		Building target: g7_20.elf
+		Invoking: AVR/GNU Linker : 4.8.1
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-gcc.exe" -o g7_20.elf  g7_20.o   -Wl,-Map="g7_20.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -mmcu=attiny13a  
+		Finished building target: g7_20.elf
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "g7_20.elf" "g7_20.hex"
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "g7_20.elf" "g7_20.eep" || exit 0
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-objdump.exe" -h -S "g7_20.elf" > "g7_20.lss"
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures "g7_20.elf" "g7_20.srec"
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-size.exe" "g7_20.elf"
+		   text	   data	    bss	    dec	    hex	filename
+		    128	      0	      0	    128	     80	g7_20.elf
+	Done executing task "RunCompilerTask".
+	Using "RunOutputFileVerifyTask" task from assembly "C:\Program Files (x86)\Atmel\Atmel Studio 6.2\Extensions\Application\AvrGCC.dll".
+	Task "RunOutputFileVerifyTask"
+				Program Memory Usage 	:	128 bytes   12,5 % Full
+				Data Memory Usage 		:	0 bytes   0,0 % Full
+	Done executing task "RunOutputFileVerifyTask".
+Done building target "CoreBuild" in project "g7_20.cproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
+Target "Build" in file "C:\Program Files (x86)\Atmel\Atmel Studio 6.2\Vs\Avr.common.targets" from project "D:\Projects\MCU\AVR\g7_20\g7_20.cproj" (entry point):
+Done building target "Build" in project "g7_20.cproj".
+Done building project "g7_20.cproj".
+
+Build succeeded.
+========== Rebuild All: 1 succeeded, 0 failed, 0 skipped ==========
